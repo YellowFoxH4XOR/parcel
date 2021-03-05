@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+
+    # Redis service for redis things.
+    redis-parcel:
+        image: redis
+        ports:
+            - "6379:6379"
+        volumes:
+            - redis-parcel-vol:/data
+
+    # MySQL service for mysql things.
+    mysql-parcel:
+        image: redis
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+            - MYSQL_DATABASE=angular-fastapi
+            - MYSQL_USER=angular-fastapi
+            - MYSQL_PASSWORD=root
+        ports:
+            - "3306:3306"
+        volumes:
+            - mysql-parcel-vol:/data
+
+volumes:
+    redis-parcel-vol:
+    postgres-parcel-vol:
+    mysql-parcel-vol:
