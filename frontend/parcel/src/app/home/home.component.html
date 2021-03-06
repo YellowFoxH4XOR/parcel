@@ -1,0 +1,19 @@
+<div>
+    <div class="flex-box">
+        <mat-form-field class="common input-box">
+          <mat-label>Tracking Number</mat-label>
+          <input matInput [(ngModel)]="trackingno" maxlength="256" placeholder="No..">
+          <mat-hint align="start"><strong>We dont save it anywhere </strong> </mat-hint>
+        </mat-form-field>
+        <mat-form-field class="common" appearance="outline">
+          <mat-label>Courier Partner</mat-label>
+          <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="bluedart">Bluedart</mat-option>
+            <mat-option value="dtdc">DTDC</mat-option>
+            <mat-option value="indianpost">IndianPost</mat-option>
+          </mat-select> 
+        </mat-form-field>
+        <button class="button-style common" (click)="checkStatus()" mat-raised-button color="warn">Track</button>
+    </div>
+</div>
