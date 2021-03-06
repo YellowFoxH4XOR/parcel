@@ -103,3 +103,4 @@ ENV/
 
 # IDE settings
 .vscode/
+frontend/parcel/node_modules/*
