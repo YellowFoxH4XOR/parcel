@@ -6,8 +6,10 @@ from selenium.webdriver.chrome.options import Options
 def fetch_details_from_bludart(waybill):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
-    driver = webdriver.Chrome('/Users/h4xor/Desktop/github_proj/parcel/drivers/mac/chromedriver',
-                              chrome_options=chrome_options)
+    driver = webdriver.Chrome(
+        'D:\Package_Status\parcel_feature_dtdc\parcel\drivers\windows\chromedriver.exe',
+        chrome_options=chrome_options
+    )
     driver.get("https://www.bluedart.com/tracking")
     element = driver.find_element_by_id('trackingNo')
     element.send_keys(waybill)
